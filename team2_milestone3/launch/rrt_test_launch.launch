@@ -1,0 +1,5 @@
+<launch>
+<rosparam command="load" file="$(find rrt)/rrt_params.yaml" />
+<include file="$(find f110_simulator)/launch/simulator.launch"/>
+<node pkg="rrt" type="rrt_node" name="rrt_node" output="screen"/>
+</launch>

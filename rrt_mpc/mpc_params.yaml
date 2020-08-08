@@ -1,0 +1,109 @@
+# Topics MPC subscribes to
+odom_topic: "/odom"
+opp_topic: "/opp_odom"
+
+# Topics MPC publishes to
+drive_topic: "/drive"
+vis_topic: "/waypoint_vis"
+
+# Pure Pursuit things
+pkg_name: "rrt_mpc"
+wp_relative_path: "/data/skirk_fast6.csv"
+percent_waypoints_forward: 0.045
+
+# Car params
+wheelbase: 0.3302
+car_width: 0.2032
+max_steering_angle: 0.4189 # rads (24 degrees)
+max_accel: 9.51 # m/s^2
+max_speed: 20 # m/s
+friction_coeff: 0.523 # - (complete estimate)
+height_cg: 0.074 # m (roughly measured to be 3.25 in)
+l_cg2rear: 0.17145 # m (decently measured to be 6.75 in)
+l_cg2front: 0.15875 # m (decently measured to be 6.25 in)
+C_S_front: 4.718 #.79 # 1/rad ? (estimated weight/4)
+C_S_rear: 5.4562 #.79 # 1/rad ? (estimated weight/4)
+mass: 3.47 # kg
+moment_inertia: .04712 # kg m^2 
+kin_vel_threshold: 0.75
+
+# MPC Params
+pred_horizon: 35
+num_dare_iters: 150
+print_osqp_output: false
+corridor_width_multiplier: 100
+vel_min: 0
+vel_max: 4.5
+accel_min: -9.51
+accel_max: 9.51
+
+# Q matrix
+x_pos_cost: 6
+y_pos_cost: 10
+orientation_cost: 0.1
+velocity_cost: 5
+orientation_vel_cost: 0.1
+slip_angle_cost: 0.1
+
+# R matrix
+accel_cost: 0.1
+steer_cost: 0.25
+
+# RRT pubs/subs
+scan_topic: "/scan"
+map_topic: "/map"
+viz_topic: "/occuGrid"
+test_topic: "/odom"
+tree_topic: "/tree"
+line_topic: "/path_lines"
+best_line_topic: "/best_line_topic"
+do_visualization: false
+
+# RRT waypoints file
+waypoints: "/data/waypoints_skirk_wide.csv"
+# waypoints: "/data/skirk_fast6.csv"
+# Occupancy Grid Params
+occupancy_resolution: 0.05
+occupancy_int_size: 800 # should not go above 1000 (need to redefine pair hash otherwise)
+min_scan_dist: 0.1
+lidar_offset: 0.3
+x_sample: 4
+y_sample: 2
+
+# RRT Params
+steer_dist: 0.5
+RRTs_connection_dist: 0.5
+tree_nodes: 200
+car_intersection_radius: 2.5
+max_iter: 200
+rrt_close_to_goal: 0.5
+
+#PREDICTION ADDITION VVVVV
+#RRT dynamic collision vars
+nominal_speed: 4.5
+dynamic_collision_distance: 0.6
+
+
+# subs/pubs for predictor
+opponent_topic: "/opp_odom"
+vis_topic: "path"
+
+
+# Prediction params
+dt: 0.01
+steps: 100
+linear_weight_decay: 0.98
+do_visualization: true
+wheelbase: 0.3302
+max_speed: 20
+max_accel: 9.51
+max_decel: 13.26
+
+
+#################### PARAMS FOR NONLINEAR UPDATES ###############
+# Pure Pursuit Params
+LOOKAHEAD_DISTANCE: 1.25
+MAX_STEERING_ANGLE: 0.4189
+NUM_COLS_IN_WP: 6
+
+#END PREDICTION ADDITION

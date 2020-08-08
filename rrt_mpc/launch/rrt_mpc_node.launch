@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+
+<node pkg="rrt_mpc" type="rrt_mpc" name="team2_agent" output="screen">
+  <rosparam command="load" file="$(find rrt_mpc)/mpc_params.yaml" ns="/rrt_mpc"/>
+</node>
+
+</launch>

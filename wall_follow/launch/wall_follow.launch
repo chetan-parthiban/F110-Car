@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Launch the Simulator -->
+  <include file="$(find f110_simulator)/launch/simulator.launch"/>
+
+  <!-- Launch the Wall Follow Node -->
+  <node pkg="wall_follow" name="wall_follow_node" type="wall_follow.py" output="screen">
+  </node>
+  
+</launch>

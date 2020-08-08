@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  
+<include file="$(find f1tenth_gym_ros)/launch/gym_bridge_host.launch"/>
+
+<node pkg="rrt_mpc" type="rrt_mpc" name="team2_agent" output="screen">
+  <rosparam command="load" file="$(find rrt_mpc)/mpc_params.yaml" ns="/rrt_mpc"/>
+</node>
+
+</launch>

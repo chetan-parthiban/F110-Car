@@ -1,0 +1,25 @@
+# subs/pubs for predictor
+opponent_topic: "/odom"
+vis_topic: "path"
+
+
+# Prediction params
+dt: 0.01
+steps: 100
+linear_weight_decay: 0.98
+do_visualization: true
+wheelbase: 0.3302
+max_speed: 20
+max_accel: 9.51
+max_decel: 13.26
+
+
+#################### PARAMS FOR NONLINEAR UPDATES ###############
+# Pure Pursuit Params
+LOOKAHEAD_DISTANCE: 1.25
+MAX_STEERING_ANGLE: 0.4189
+
+# Waypoint params
+pkg_name: "opponent_predictions"
+wp_relative_path: "/data/skirk.csv"
+NUM_COLS_IN_WP: 4

@@ -1,0 +1,7 @@
+<launch>
+
+<node pkg="team2_milestone3" type="team2_milestone3_node" name="team2_milestone3_node" output="screen">
+    <rosparam command="load" file="$(find team2_milestone3)/rrt_params.yaml" ns="/team2_milestone3"/>
+</node>
+
+</launch>

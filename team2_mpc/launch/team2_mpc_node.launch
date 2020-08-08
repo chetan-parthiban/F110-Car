@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+<node pkg="reset_car" type="reset_car.py" name="reset_car_node" output="screen" />
+
+<node pkg="team2_mpc" type="team2_mpc" name="team2_mpc_agent" output="screen">
+  <rosparam command="load" file="$(find team2_mpc)/mpc_params.yaml" ns="/mpc"/>
+</node>
+
+  </launch>

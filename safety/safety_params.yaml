@@ -1,0 +1,6 @@
+# The names of topics to listen and publish to
+brake_bool_topic: "/brake_bool"
+brake_drive_topic: "/brake"
+min_ttc_topic: "/min_ttc"
+scan_topic: "/scan"
+odom_topic: "/odom"

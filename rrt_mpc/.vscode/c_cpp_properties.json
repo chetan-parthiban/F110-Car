@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/daviddep/Final_Project/devel/include/**",
+                "/opt/ros/melodic/include/**",
+                "/home/daviddep/Final_Project/src/f110_team2/opponent_predictions/include/**",
+                "/home/daviddep/Final_Project/src/f110_team2/rrt_mpc/include/**",
+                "/home/daviddep/Final_Project/src/f110_team2/scan_matching/include/**",
+                "/home/daviddep/Final_Project/src/f110_team2/team2_milestone3/include/**",
+                "/home/daviddep/Final_Project/src/f110_team2/team2_mpc/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

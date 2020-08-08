@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Launch the Simulator -->
+  <include file="$(find f110_simulator)/launch/simulator.launch"/>
+
+  <!-- Launch the Safety Node -->
+  <node pkg="safety" name="safety" type="safety_node" output="screen">
+    <rosparam command="load" file="$(find safety)/safety_params.yaml"/>
+  </node>
+  
+</launch>

@@ -1,0 +1,41 @@
+# Topics that RRT listens to
+# TODO: add your own
+# TODO: change this to the pose topic published particle filter
+pose_topic: "/pose"
+scan_topic: "/scan"
+map_topic: "/map"
+viz_topic: "/occuGrid"
+test_topic: "/odom"
+tree_topic: "/tree"
+line_topic: "/path_lines"
+nav_topic: "/drive"
+best_line_topic: "/best_line_topic"
+
+waypoints: "/data/waypoints.csv"
+
+
+occupancy_resolution: 0.05
+occupancy_int_size: 800 #should not go above 1000 (need to redefine pair hash otherwise)
+min_scan_dist: 0.1
+
+lidar_offset: 0.3
+x_sample: 3
+y_sample: 2
+steer_dist: 0.5
+RRTs_connection_dist: 0.5
+tree_nodes: 400
+L: 2.5
+max_iter: 500
+speed: 5
+
+rrt_close_to_goal: 0.5
+
+slowdown: 1.5
+
+
+# Topics that RRT publishes to
+# TODO: add your own
+# visualization
+
+# TODO: add Parameters for RRT
+
