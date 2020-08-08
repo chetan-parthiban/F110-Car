@@ -1,4 +1,6 @@
-# ESE 615 Team 2 Code Base
+# F110 Team 2 Code Base
+
+Code written in collaboration with David DePauw and Brandom McBride
 
 # Dependencies
 - [Eigen3](http://eigen.tuxfamily.org/index.php?title=Main_Page)
